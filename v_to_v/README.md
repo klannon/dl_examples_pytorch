@@ -4,6 +4,12 @@ The goal of this experiment is test how well an neural network (NN) can reproduc
 
 If you want to see what options are available for any script in this directory, just try calling the script with `-h`.
 
+## Set up your environment.  I recommend doing this with conda.  See the conda webpage for instructions for installing conda.  Then you can create the appropriate environment with the following commands:
+```
+conda conda create --name pytorch pytorch torchvision -c pytorch root -c conda-forge pandas
+conda activate pytorch
+```
+
 ## Generate Vectors
 
 This script generates a file with random vectors.  The file is stored in compressed numpy format.
@@ -31,7 +37,7 @@ This script compares the performance of the NN on an independent sample you supp
 
 ```
 ./toy_mc.py 10000 validate10k.npz
-./validate.py testv1_N10_b256_l3_frac0.900000.tgz validate10k.npz
+./validate.py test1_N10_b250_l3_frac0.900000_lr0.000100_relu.tgz  validate10k.npz
 ```
 
 The first line generates a validation sample.  The second line runs the validation on the simple model (single layer with 3 hidden nodes).  The output is saved to a file that has the same name as the training file but the `.tgz` is replaced by `.root`.
@@ -41,7 +47,7 @@ The first line generates a validation sample.  The second line runs the validati
 This is a very simple (and not well designed) script that prints out the NN weights and verifies if the solution makes sense.  It **only** works for the simple one layer, 3 node network.  It won't produce sensible output for anything else.
 
 ```
-./print.py testv1_N10_b256_l3_frac0.900000.tgz
+./print.py test1_N10_b250_l3_frac0.900000_lr0.000100_relu.tgz
 ```
 
 

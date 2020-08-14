@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-from __future__ import print_function
+
 import numpy as np
 import torch
 import argparse, tarfile, os, tempfile, shutil, math, pickle, copy, sys, shlex

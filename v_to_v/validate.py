@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     # Build them model
     model = torch.load(os.path.join(tempDir,'model.pkl'))
-    print model    
+    print(model)    
     model.eval()
     
     shutil.rmtree(tempDir)
@@ -74,7 +74,7 @@ if __name__ == "__main__":
     minInput = np.amin(inputs,axis=0)
     maxInput = np.amax(inputs,axis=0)
 
-    print stdDiff
+    print(stdDiff)
 
     # Let's define a histogram for each output in the target.
     diffHists = []

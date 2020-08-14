@@ -25,10 +25,10 @@ if __name__ == "__main__":
     inputs = np.empty([args.nGen, 3], dtype='float32')
     outputs = np.empty([args.nGen, 3], dtype='float32')
 
-    for iEvt in xrange(args.nGen):
+    for iEvt in range(args.nGen):
 
         if iEvt%1000 == 0:
-            print 'Generating event {}'.format(iEvt)
+            print('Generating event {}'.format(iEvt))
 
         # Make a particle X
         xPt = random.uniform(0,300)
@@ -47,4 +47,4 @@ if __name__ == "__main__":
     np.savez_compressed(args.outfile,inputs=inputs,outputs=outputs)
 
 
-    print 'Done!'
+    print('Done!')
